@@ -163,11 +163,11 @@ With a little configuration of Visual Studio Code we can connect directly to a d
         }
     ```
     <p align='center'>
-    <img src='img/devcontainerjson.png' width='80%' style='min-width:600px'>
+    <img src='img/devcontainerjson.png' width='90%' style='min-width:600px;max-width:800px'>
     </p>
 - In the bottom left click the green "Remote Development" icon which should be showing your current SSH connection. This will show your remote development options and, if you have the "Remote - Containers" extension installed, you will see "Remote-Containers" settings as below.
     <p align='center'>
-        <img src='img/remote_dev_opt.png' width='100%' style='min-width:400px;max-width:550px'>
+        <img src='img/remote_dev_opt.png' width='70%' style='min-width:400px;max-width:550px'>
     </p>
 - Select: "Open Folder in Container..."
 - We will open our `/project` folder
