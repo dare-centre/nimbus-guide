@@ -197,14 +197,14 @@
 </ol>
 <p>Below you can see an example checking Python works correctly on Nimbus running a docker container (as per the Dockerfile installation above). This example uses Visual Studio Code to connect to Nimbus:</p>
 <p align='center'>
-  <img src='img/working_docker_pytest.png' width='55%' style='min-width:600px'>
+  <img src='img/working_docker_pytest.png' width='75%' style='min-width:600px;max-width:700px'>
 </p>
 <p>As a further test, we will copy the files &quot;<a href="http://test.py">test.py</a>&quot; and &quot;test.ipynb&quot; from the <code>examples</code> directory of this repository to a folder on our nimbus instance - <code>/project/python</code>. We can run our script <code>test.py</code> from the command line using:</p>
 <pre><code class="language-docker"><div>docker <span class="hljs-keyword">run</span><span class="bash"> -v <span class="hljs-string">&quot;/project:/project&quot;</span> -w /project pytest python /project/python/test.py</span>
 </div></code></pre>
 <p>With the output as shown below:</p>
 <p align='center'>
-  <img src='img/docker_run.png' width='55%' style='min-width:600px'>
+  <img src='img/docker_run.png' width='75%' style='min-width:600px;max-width:700px'>
 </p>
 <h3 id="43-connecting-into-a-docker-container-on-nimbus-with-visual-studio-code">4.3 Connecting into a docker container on Nimbus with Visual Studio Code</h3>
 <p>With a little configuration of Visual Studio Code we can connect directly to a docker container on Nimbus. This can be useful to interactively run code on Nimbus either directly from a .py file (including debugging) or from a Jupyter Notebook. Starting from the same point as above, with the <code>/project</code> folder open in Visual Studio Code via SSH, we will do the following:</p>
@@ -213,7 +213,7 @@
     - type "open settings" and select "Preferences: Open Settings (JSON)" -->
 <ul>
 <li>Ensure you have the &quot;Remote - Containers&quot; extension installed in Visual Studio Code (it may ask you to reinstall on your ssh session)  <p align='center'>
-      <img src='img/extensions.png' width='40%' style='min-width:500px'>
+      <img src='img/extensions.png' width='70%' style='min-width:400px;max-width:550px'>
   </p>
 </li>
 <li>In the <code>/project</code> directory create a subdirectory <code>/project/.devcontainer/</code> and file <code>/project/.devcontainer/devcontainer.json</code>
@@ -228,11 +228,11 @@
     }
 </div></code></pre>
   <p align='center'>
-  <img src='img/devcontainerjson.png' width='80%' style='min-width:600px'>
+  <img src='img/devcontainerjson.png' width='90%' style='min-width:600px;max-width:800px'>
   </p>
 </li>
 <li>In the bottom left click the green &quot;Remote Development&quot; icon which should be showing your current SSH connection. This will show your remote development options and, if you have the &quot;Remote - Containers&quot; extension installed, you will see &quot;Remote-Containers&quot; settings as below.  <p align='center'>
-      <img src='img/remote_dev_opt.png' width='50%' style='min-width:400px'>
+      <img src='img/remote_dev_opt.png' width='70%' style='min-width:400px;max-width:550px'>
   </p>
 </li>
 <li>Select: &quot;Open Folder in Container...&quot;</li>
