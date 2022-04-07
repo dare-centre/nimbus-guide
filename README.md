@@ -53,8 +53,12 @@ We will create a separate volume to store our data and mount this to the instanc
     - Attach it to your instance
 - From your ssh session (in terminal or via Visual Studio Code):
     - Check the volume exists and format it (only if its a new volume)
-    - mount the file system - mount this to `/project` to follow the docker example below
+    - mount the file system - mount this to `/project` to follow the docker example below:
+      - check the volume: `sudo fdisk -l /dev/vdc`
+      - (ONLY) if this is a new volume then `sudo mkfs.ext4 /dev/vdc` (this will erase contents of the volume)
+      - mount to `/project` with: `sudo mount /dev/vdc /project`
     - set permissions to ensure you can access
+      - `sudo chown ubuntu /project` 
 
 The best way to trasnfer files for most use cases is to use an ftp/sftp client (you can also use command line tools e.g., scp, rsync). Filezilla is a popular client and instructions for its use with Nimbus can be found <a href="https://support.pawsey.org.au/documentation/pages/viewpage.action?pageId=59475450#TransferYourData-TransferswithFilezilla">here</a>. A great choice on Mac is Cyberduck for which you would:
 
@@ -175,3 +179,5 @@ With a little configuration of Visual Studio Code we can connect directly to a d
     - `Dev Container @ssh://146.118.##.##`
 - We can trial this by opening our `/project/python/test.ipynb` notebook. You should be able to select your conda environment, run and confirm we are in the correct working directory and with the correct CPU/Memory configuration of your Nimbus instance.
 - You can use the remote development options to reopen the folder in SSH again to exit the docker container.
+- `docker rm $(docker ps -a -q)` will kill all containers
+- `docker image rm pytest` will delete your image
