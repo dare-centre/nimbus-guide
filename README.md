@@ -185,6 +185,6 @@ With a little configuration of Visual Studio Code we can connect directly to a D
 - `docker rm $(docker ps -a -q)` will kill all containers.
 - `docker image rm pytest` will delete your image.
 
-## Acknowledgments
+## Acknowledgements
 
 Main author: Joshua Simmons. Secondary updates: Travis Stenborg.
